@@ -33,7 +33,7 @@ game: $(OBJS)
 play: game.img
 	$(QEMU) -serial stdio game.img
 debug: game.img
-	$(QEMU) -s -S game.img
+	$(QEMU) -serial stdio -s -S game.img
 
 # make clean可以清除已生成的文件
 clean:
