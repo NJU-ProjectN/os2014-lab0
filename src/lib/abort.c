@@ -21,6 +21,7 @@ blue_screen(const char *file, int line) {
 	append(&p, ":");
 	append(&p, itoa(line));
 
+	prepare_buffer();
 	memset(vmem, 1, SCR_SIZE);
 	draw_string(buf, 0, 0, 15);
 	display_buffer();
