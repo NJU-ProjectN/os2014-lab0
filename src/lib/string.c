@@ -8,7 +8,7 @@
  */
 char *itoa(int a) {
 	static char buf[30];
-	char *p = buf + sizeof(buf);
+	char *p = buf + sizeof(buf) - 1;
 	do {
 		*--p = '0' + a % 10;
 	} while (a /= 10);
